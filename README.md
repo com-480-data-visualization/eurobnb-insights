@@ -1,4 +1,4 @@
-# Eurobnb-Insights: Project of Data Visualization (COM-480)
+# Eurobnb-Insights: Project of Data Visualization (COM-480) 🇪🇺🏨
 
 <div align="center">
 
@@ -13,8 +13,6 @@
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
 ## Milestone 1 (21st March, 5pm)
-
-**10% of the final grade**
 Milestone 1 Report can be found in the Milestone-1 folder called as "Milestone_1_Dataviz.pdf", or in this [link](
 
 ## Milestone 2 (18th April, 5pm)
