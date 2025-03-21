@@ -5,7 +5,7 @@
 | Student's name          | SCIPER |
 | ----------------------- | ------ |
 | Harkeerat Singh Sawhney | 394887 |
-| Daniela Gjorgjieva      |        |
+| Daniela Gjorgjieva      | 376745 |
 | Imane Jennane           | 310900 |
 
 </div>
