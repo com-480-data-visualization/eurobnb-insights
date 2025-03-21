@@ -1,4 +1,4 @@
-# Eurobnb-Insights: Project of Data Visualization (COM-480) 🇪🇺🏨
+# Eurobnb-Insights: Project of Data-Visualization 🇪🇺🏨
 
 <div align="center">
 
@@ -6,13 +6,14 @@
 | ----------------------- | ------ |
 | Harkeerat Singh Sawhney | 394887 |
 | Daniela Gjorgjieva      |        |
-| Imane Jennane           |        |
+| Imane Jennane           | 310900 |
 
 </div>
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
 ## Milestone 1 (21st March, 5pm)
+
 Milestone 1 Report can be found in the Milestone-1 folder called as "Milestone_1_Dataviz.pdf", or in this [link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-1/Milestone_1_DataViz.pdf).
 
 ## Milestone 2 (18th April, 5pm)
