@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Airbnb Europe Visualization</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Airbnb Visualization: European Cities</h1>
+    <div id="controls">
+      <label for="city">Select a city:</label>
+      <select id="city">
+        <option value="paris">Paris</option>
+        <option value="rome">Rome</option>
+        <option value="berlin">Berlin</option>
+        <!-- place for others -->
+      </select>
+      <label for="day">Select Day Type:</label>
+      <select id="day">
+        <option value="weekday">Weekday</option>
+        <option value="weekend">Weekend</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="map-container">
+      <h2>Map of Listings</h2>
+      <div id="map"></div>
+    </section>
+    <section id="chart-container">
+      <h2>Price Distribution</h2>
+      <div id="chart"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
