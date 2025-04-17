@@ -7,7 +7,7 @@ import Amsterdam from './pages/Amsterdam'
 
 const router = createBrowserRouter([
   {
-    path: '/dv-react-app',
+    path: '/eurobnb-insight-app',
     element: <Layout />,
   },
   {

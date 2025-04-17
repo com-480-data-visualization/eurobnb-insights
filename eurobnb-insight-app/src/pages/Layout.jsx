@@ -13,6 +13,10 @@ export default function Layout() {
         <MapComponent />
 
       </main>
+      <section>
+        <h2>City to City Visualization</h2>
+        <p>Here 2 different visualizations would be shown to show a City vs City</p>
+      </section>
       <footer>
         <p>© 2025 Eurobnb Insights</p>
       </footer>
