@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/com-480-data-visualization/eurobnb-insights",
+  "homepage": "https://github.com/com-480-data-visualization/eurobnb-insights/eurobnb-insight-app",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
