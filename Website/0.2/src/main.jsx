@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <Paris />,
   },
   {
-    path: "/amsterdam",
+    path: "/eurobnb-insights/amsterdam",
     element: <Amsterdam />,
   },
 ])
