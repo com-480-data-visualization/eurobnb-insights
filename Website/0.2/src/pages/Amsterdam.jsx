@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Treemap, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import "../css/AmsterdamPage.css";
 
 // GeoJSON data for Amsterdam districts with zones
 const amsterdamDistricts = {
@@ -105,9 +106,9 @@ const barGraphData = [
   { name: "Oost", listings: 40 },
 ];
 
+
 const Amsterdam = () => {
-  // Style each district based on its color property
-  const districtStyle = (feature) => ({
+  const districtStyle = feature => ({
     fillColor: feature.properties.color,
     weight: 2,
     opacity: 1,
@@ -121,42 +122,31 @@ const Amsterdam = () => {
   };
 
   return (
-    <div>
-      {/* Map Section */}
-      <div style={{ display: "flex", height: "70vh", width: "100%" }}>
-        {/* Sidebar Menu */}
-        <div style={{ width: "250px", padding: "20px", backgroundColor: "#f4f4f4", borderRight: "1px solid #ddd" }}>
-          <h3>Filter Options</h3>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>
-              <label>
-                <input type="checkbox" /> Centrum
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" /> West Zone
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" /> East Zone
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" /> Oost
-              </label>
-            </li>
-          </ul>
-          <button style={{ marginTop: "10px", padding: "10px 20px", backgroundColor: "#007bff", color: "#fff", border: "none", borderRadius: "5px", cursor: "pointer" }}>
-            Apply Filters
-          </button>
-        </div>
+    <div className="amsterdam-dashboard-page">
+      {/* ====== HEADER STORYTELLING SECTION ====== */}
+      <section className="dashboard-header-card">
+        <h1>Amsterdam Airbnb Data Story</h1>
+        <p className="dashboard-narrative">
+          Explore how Airbnb listings are distributed across Amsterdam’s districts.  
+          Discover which zones lead in listings, compare price/rating, and interact with the map and charts to reveal trends.
+        </p>
+      </section>
 
-        {/* Map Container */}
-        <div style={{ flex: 1 }}>
-          <MapContainer center={[52.370216, 4.895168]} zoom={13} style={{ height: "100%", width: "100%" }}>
+      {/* ====== MAP & FILTER SIDEBAR ====== */}
+      <div className="amsterdam-main-row">
+        <aside className="amsterdam-sidebar">
+          <h3>Filter Options</h3>
+          <ul>
+            <li><label><input type="checkbox" /> Centrum</label></li>
+            <li><label><input type="checkbox" /> West Zone</label></li>
+            <li><label><input type="checkbox" /> East Zone</label></li>
+            <li><label><input type="checkbox" /> Oost</label></li>
+          </ul>
+          <button className="filter-btn">Apply Filters</button>
+        </aside>
+        <div className="amsterdam-map-card">
+          <h3 className="section-title">Amsterdam Districts Map</h3>
+          <MapContainer center={[52.370216, 4.895168]} zoom={13} style={{ height: "410px", width: "100%" }}>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -173,32 +163,44 @@ const Amsterdam = () => {
               </Popup>
             </Marker>
           </MapContainer>
+          <p className="map-caption">
+            <span role="img" aria-label="info">ℹ️</span> Click zones or markers for details.
+          </p>
         </div>
       </div>
 
-      {/* Visualization Section */}
-      <div style={{ padding: "20px" }}>
-        <h3>Treemap Visualization</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <Treemap
-            data={treemapData}
-            dataKey="size"
-            stroke="#fff"
-            fill="#8884d8"
-            aspectRatio={4 / 3}
-          />
-        </ResponsiveContainer>
-
-        <h3 style={{ marginTop: "40px" }}>Bar Graph Visualization</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={barGraphData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="listings" fill="#82ca9d" />
-          </BarChart>
-        </ResponsiveContainer>
+      {/* ====== VISUALIZATIONS SECTION ====== */}
+      <div className="amsterdam-visuals-row">
+        <div className="visual-card">
+          <h3 className="section-title">Treemap: Listings Proportion by Zone</h3>
+          <ResponsiveContainer width="100%" height={260}>
+            <Treemap
+              data={treemapData}
+              dataKey="size"
+              stroke="#fff"
+              fill="#8884d8"
+              aspectRatio={4 / 3}
+            />
+          </ResponsiveContainer>
+          <div className="viz-caption">
+            Centrum has the highest share of listings. Hover for zone sizes.
+          </div>
+        </div>
+        <div className="visual-card">
+          <h3 className="section-title">Bar Chart: Listings Count per Zone</h3>
+          <ResponsiveContainer width="100%" height={260}>
+            <BarChart data={barGraphData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="listings" fill="#82ca9d" />
+            </BarChart>
+          </ResponsiveContainer>
+          <div className="viz-caption">
+            Centrum leads, followed by the West Zone. 
+          </div>
+        </div>
       </div>
     </div>
   );

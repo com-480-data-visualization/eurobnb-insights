@@ -1,3 +1,8 @@
+body {
+  background: #ffeedd !important;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,3 +45,56 @@
 .read-the-docs {
   color: #888;
 }
+
+.app-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #e17055; /* bright orange */
+  letter-spacing: 2px;
+}
+
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.compare-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.compare-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #6c63ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.compare-button:hover {
+  background-color: #574dcf;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+

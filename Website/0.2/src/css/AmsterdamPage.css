@@ -1,0 +1,135 @@
+.amsterdam-dashboard-page {
+    padding: 2.5rem 2rem;
+    background: #f8f8fb;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .dashboard-header-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 3px 18px #4a6fa506;
+    margin-bottom: 2.5rem;
+    padding: 2.2rem 2rem 1.3rem 2rem;
+    text-align: left;
+  }
+  .dashboard-header-card h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #365a99;
+    font-weight: 800;
+  }
+  .dashboard-narrative {
+    font-size: 1.16rem;
+    color: #4a6fa5;
+    margin: 0.8rem 0 0 0;
+    font-weight: 500;
+  }
+  
+  .amsterdam-main-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.7rem;
+  }
+  .amsterdam-sidebar {
+    min-width: 210px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 3px 18px #4a6fa507;
+    padding: 2.2rem 1.1rem 1.5rem 1.1rem;
+    font-size: 1.07rem;
+    height: fit-content;
+    border: 1.5px solid #f3f3f6;
+  }
+  .amsterdam-sidebar h3 {
+    font-size: 1.12rem;
+    margin-bottom: 1.3rem;
+    color: #2d4377;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+  .amsterdam-sidebar ul {
+    padding: 0;
+    margin: 0 0 1.1rem 0;
+    list-style: none;
+  }
+  .amsterdam-sidebar li {
+    margin-bottom: 0.9rem;
+  }
+  .filter-btn {
+    width: 100%;
+    padding: 0.68rem 0;
+    background: #4a6fa5;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.18s;
+    font-size: 1.03rem;
+    letter-spacing: 0.5px;
+  }
+  .filter-btn:hover {
+    background: #fbae17;
+    color: #213547;
+  }
+  
+  .amsterdam-map-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #4a6fa50a;
+    padding: 2.1rem 2.2rem 1.2rem 2.2rem;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-title {
+    font-size: 1.25rem;
+    color: #4a6fa5;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.4px;
+  }
+  .map-caption {
+    margin-top: 0.8rem;
+    color: #65676d;
+    font-size: 0.98rem;
+    text-align: left;
+  }
+  
+  .amsterdam-visuals-row {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.2rem;
+    flex-wrap: wrap;
+  }
+  .visual-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #4a6fa50a;
+    padding: 2.1rem 1.2rem 1.3rem 1.2rem;
+    flex: 1 1 420px;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+  }
+  .viz-caption {
+    margin-top: 1rem;
+    color: #6b6d70;
+    font-size: 1.04rem;
+  }
+  
+  @media (max-width: 1100px) {
+    .amsterdam-main-row,
+    .amsterdam-visuals-row {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .amsterdam-sidebar {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+  
