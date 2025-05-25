@@ -13,10 +13,15 @@ const cityCoordinates = {
 export default function MapComponent() {
   const navigate = useNavigate()
 
-  const handleButtonClick = (city) => {
-    navigate(`/${city.toLowerCase()}`)
+  const cityPaths = {
+  Amsterdam: '/eurobnb-insights/amsterdam',
+  Athens: '/cities/athens/overview',
+  // Add more cities and paths here
   }
 
+  const handleButtonClick = (city) => {
+    navigate(cityPaths[city] || `/${city.toLowerCase()}`)
+  }
   return (
     <MapContainer center={[48.8566, 2.3522]} zoom={5} style={{ height: '500px' }}>
       <TileLayer

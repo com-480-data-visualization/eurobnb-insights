@@ -1,135 +1,283 @@
+/* ====== THEME VARIABLES ====== */
+.amsterdam-dashboard-page.weekday-theme {
+  --main-bg: #f8fafc;
+  --header-bg: linear-gradient(90deg, #f8fafc 60%, #e0e7ff 100%);
+  --accent: #6366f1;
+  --button-bg: #6366f1;
+  --button-color: #fff;
+  --button-border: #6366f1;
+  --card-bg: #f8fafc;
+  --caption-bg: #f1f5f9;
+  --caption-color: #4a5568;
+}
+
+.amsterdam-dashboard-page.weekend-theme {
+  --main-bg: #fff5f3;
+  --header-bg: linear-gradient(90deg, #fff5f3 60%, #ffe0e0 100%);
+  --accent: #e74c3c;
+  --button-bg: #e74c3c;
+  --button-color: #fff;
+  --button-border: #e74c3c;
+  --card-bg: #fff5f3;
+  --caption-bg: #ffe0e0;
+  --caption-color: #4a5568;
+}
+
+/* ====== PAGE BACKGROUND ====== */
 .amsterdam-dashboard-page {
-    padding: 2.5rem 2rem;
-    background: #f8f8fb;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  .dashboard-header-card {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 3px 18px #4a6fa506;
-    margin-bottom: 2.5rem;
-    padding: 2.2rem 2rem 1.3rem 2rem;
-    text-align: left;
-  }
-  .dashboard-header-card h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #365a99;
-    font-weight: 800;
-  }
-  .dashboard-narrative {
-    font-size: 1.16rem;
-    color: #4a6fa5;
-    margin: 0.8rem 0 0 0;
-    font-weight: 500;
-  }
-  
-  .amsterdam-main-row {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2.7rem;
-  }
-  .amsterdam-sidebar {
-    min-width: 210px;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 3px 18px #4a6fa507;
-    padding: 2.2rem 1.1rem 1.5rem 1.1rem;
-    font-size: 1.07rem;
-    height: fit-content;
-    border: 1.5px solid #f3f3f6;
-  }
-  .amsterdam-sidebar h3 {
-    font-size: 1.12rem;
-    margin-bottom: 1.3rem;
-    color: #2d4377;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-  }
-  .amsterdam-sidebar ul {
-    padding: 0;
-    margin: 0 0 1.1rem 0;
-    list-style: none;
-  }
-  .amsterdam-sidebar li {
-    margin-bottom: 0.9rem;
-  }
-  .filter-btn {
-    width: 100%;
-    padding: 0.68rem 0;
-    background: #4a6fa5;
-    color: #fff;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.18s;
-    font-size: 1.03rem;
-    letter-spacing: 0.5px;
-  }
-  .filter-btn:hover {
-    background: #fbae17;
-    color: #213547;
-  }
-  
-  .amsterdam-map-card {
-    flex: 1;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px #4a6fa50a;
-    padding: 2.1rem 2.2rem 1.2rem 2.2rem;
-    min-width: 340px;
-    display: flex;
-    flex-direction: column;
-  }
-  .section-title {
-    font-size: 1.25rem;
-    color: #4a6fa5;
-    font-weight: 700;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.4px;
-  }
-  .map-caption {
-    margin-top: 0.8rem;
-    color: #65676d;
-    font-size: 0.98rem;
-    text-align: left;
-  }
-  
+  min-height: 100vh;
+  background: var(--main-bg);
+  transition: background 0.3s;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ====== STICKY TOGGLE BAR ====== */
+.amsterdam-dashboard-page > div[style*="sticky"] {
+  background: var(--header-bg);
+  border-bottom: 1.5px solid #e2e8f0;
+  transition: background 0.3s;
+}
+
+.amsterdam-dashboard-page button {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+}
+
+.amsterdam-dashboard-page button:focus {
+  outline: 2px solid var(--accent);
+}
+
+.amsterdam-dashboard-page .filter-btn {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 0.5em;
+}
+
+.amsterdam-dashboard-page .filter-toggle-btn {
+  background: var(--header-bg);
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+/* ====== HEADER CARD ====== */
+.dashboard-header-card {
+  background: var(--header-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 1500px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.dashboard-header-card h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #2d3748;
+}
+
+.dashboard-header-card .section-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+/* ====== FILTERS ROW ====== */
+.amsterdam-filters-row {
+  margin-bottom: 2rem;
+  background: var(--header-bg);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  position: relative;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s;
+}
+
+.amsterdam-filters-row .filter-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1em;
+  color: #2d3748;
+  gap: 0.3em;
+}
+
+.amsterdam-filters-row .filter-select,
+.amsterdam-filters-row .filter-input {
+  margin-top: 0.3em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  min-width: 120px;
+}
+
+.amsterdam-filters-row .filter-input[type="number"] {
+  width: 90px;
+}
+
+/* ====== MAP CARD ====== */
+.amsterdam-map-card {
+  background: var(--header-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 1500px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.amsterdam-map-card h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.amsterdam-map-card .map-caption {
+  background: var(--caption-bg);
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  font-size: 1.05em;
+  color: var(--caption-color);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ====== VISUAL CARDS ====== */
+.amsterdam-visuals-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.visual-card {
+  background: var(--header-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2rem 2rem 1.5rem 2rem;
+  flex: 1 1 420px;
+  min-width: 350px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.visual-card .viz-caption {
+  background: var(--caption-bg);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 1.01em;
+  color: var(--caption-color);
+  border: 1px solid #e0e0e0;
+  margin-top: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* ====== STAR BAR FOR RATINGS ====== */
+.star-bar {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #ffd700;
+  vertical-align: middle;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+/* ====== GENERAL ====== */
+hr {
+  border: none;
+  border-top: 1.5px solid #e2e8f0;
+  margin: 2rem 0 0 0;
+}
+
+@media (max-width: 900px) {
   .amsterdam-visuals-row {
-    display: flex;
-    gap: 2.5rem;
-    margin-top: 2.2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.2rem;
   }
   .visual-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px #4a6fa50a;
-    padding: 2.1rem 1.2rem 1.3rem 1.2rem;
-    flex: 1 1 420px;
-    min-width: 340px;
-    display: flex;
-    flex-direction: column;
+    min-width: 0;
+    width: 100%;
   }
-  .viz-caption {
-    margin-top: 1rem;
-    color: #6b6d70;
-    font-size: 1.04rem;
+  .dashboard-header-card,
+  .amsterdam-map-card,
+  .amsterdam-filters-row {
+    padding: 1.2rem;
   }
-  
-  @media (max-width: 1100px) {
-    .amsterdam-main-row,
-    .amsterdam-visuals-row {
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .amsterdam-sidebar {
-      width: 100%;
-      min-width: unset;
-    }
-  }
+}
 
-  
+/* ====== LEAFLET MAP OVERRIDES ====== */
+.leaflet-container {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* ====== TOOLTIP FOR CHARTS ====== */
+.recharts-tooltip-wrapper {
+  z-index: 9999;
+}
+
+.recharts-default-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+/* ====== SCROLLBAR ====== */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}

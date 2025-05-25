@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import "../css/CityNavigation.css";
 
 const cities = [
-  { name: "Amsterdam", path: "/amsterdam", icon: "🌷" },
+  { name: "Amsterdam", path: "/eurobnb-insights/amsterdam", icon: "🌷" },
   { name: "Paris", path: "/paris", icon: "🗼" },
   { name: "Athens", path: "/athens", icon: "🏛️" },
   // Add more cities here!
