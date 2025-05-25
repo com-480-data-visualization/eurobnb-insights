@@ -15,7 +15,7 @@ export default function MapComponent() {
 
   const cityPaths = {
   Amsterdam: '/eurobnb-insights/amsterdam',
-  Athens: '/cities/athens/overview',
+  Athens: '/eurobnb-insights/athens',
   // Add more cities and paths here
   }
 

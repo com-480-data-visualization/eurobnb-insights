@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './pages/Layout'
 import Paris from './pages/paris'
 import Amsterdam from './pages/Amsterdam'
+import Athens from './pages/Athens'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/eurobnb-insights/amsterdam",
     element: <Amsterdam />,
+  },
+  {
+    path: "/eurobnb-insights/athens",
+    element: <Athens />,
   },
 ])
 

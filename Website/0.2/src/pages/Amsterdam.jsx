@@ -35,6 +35,8 @@ const Amsterdam = () => {
       .then((data) => setDistricts(data));
   }, []);
 
+  console.log("Districts loaded:", districts);
+
   useEffect(() => {
     Papa.parse(
       "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/amsterdam_weekdays.csv",

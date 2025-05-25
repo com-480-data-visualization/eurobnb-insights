@@ -5,7 +5,7 @@ import "../css/CityNavigation.css";
 const cities = [
   { name: "Amsterdam", path: "/eurobnb-insights/amsterdam", icon: "🌷" },
   { name: "Paris", path: "/paris", icon: "🗼" },
-  { name: "Athens", path: "/athens", icon: "🏛️" },
+  { name: "Athens", path: "/eurobnb-insights/athens", icon: "🏛️" },
   // Add more cities here!
 ];
 
