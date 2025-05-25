@@ -20,6 +20,8 @@ import {
   YAxis,
 } from "recharts";
 import "../css/AmsterdamPage.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Amsterdam = () => {
   const [dayType, setDayType] = useState("weekday");
@@ -28,6 +30,7 @@ const Amsterdam = () => {
   const [weekdayListings, setWeekdayListings] = useState([]);
   const [weekendListings, setWeekendListings] = useState([]);
   const [compareMode, setCompareMode] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("./amsterdam.geojson")
@@ -597,7 +600,27 @@ const Amsterdam = () => {
           gap: "1.5rem",
         }}
       >
-        <span style={{ fontWeight: 600, fontSize: "1.1rem" }}>Dataset:</span>
+        {/* Back to Homepage button */}
+        <button
+          onClick={() => navigate("/eurobnb-insights")}
+          style={{
+            position: "absolute",
+            left: 30,
+            top: "50%",
+            transform: "translateY(-50%)",
+            background: "#f1f1fa",
+            color: "#2d3748",
+            border: "1.5px solid #bbb",
+            borderRadius: 7,
+            padding: "0.5em 1.3em",
+            fontWeight: 600,
+            fontSize: "1em",
+            cursor: "pointer",
+            boxShadow: "0 1px 4px rgba(60,60,120,0.07)",
+          }}
+        >
+          ← Back to Homepage
+        </button>
         <button
           onClick={() => setDayType("weekday")}
           style={{

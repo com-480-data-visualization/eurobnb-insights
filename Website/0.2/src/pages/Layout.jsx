@@ -11,9 +11,6 @@ export default function Layout() {
       </header>
 
       <div className="app-content">
-        <aside className="sidebar">
-          <CityNavigation />
-        </aside>
         <main className="main-area">
           <section className="map-wrapper">
             <MapComponent />
