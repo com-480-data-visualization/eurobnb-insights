@@ -20,10 +20,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import "../css/LisbonPage.css";
+import "../css/LondonPage.css";
 import { data } from "react-router-dom";
 
-const Lisbon = () => {
+const London = () => {
   const [dayType, setDayType] = useState("weekday");
   const [districts, setDistricts] = useState(null);
   const [listings, setListings] = useState([]);
@@ -33,15 +33,16 @@ const Lisbon = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  fetch("./isbon.geojson")
+  fetch("./london.geojson")
     .then((res) => res.json())
     .then((data) => setDistricts(data))
 }, []);
 
+console.log("Districts loaded:", districts);
 
   useEffect(() => {
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/lisbon_weekdays.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekdays.csv",
       {
         download: true,
         header: true,
@@ -49,7 +50,7 @@ const Lisbon = () => {
       }
     );
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/lisbon_weekends.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekends.csv",
       {
         download: true,
         header: true,
@@ -61,8 +62,8 @@ const Lisbon = () => {
   useEffect(() => {
     const url =
       dayType === "weekday"
-        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/lisbon_weekdays.csv"
-        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/lisbon_weekends.csv";
+        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekdays.csv"
+        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekends.csv";
     Papa.parse(url, {
       download: true,
       header: true,
@@ -584,7 +585,7 @@ const Lisbon = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className={`lisbon-dashboard-page ${dayType}-theme`}>
+    <div className={`london-dashboard-page ${dayType}-theme`}>
       <div
         style={{
           position: "sticky",
@@ -668,7 +669,7 @@ const Lisbon = () => {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <div style={{ fontSize: "3.5rem", lineHeight: 1 }}>
-            <span role="img" aria-label="lisbon">
+            <span role="img" aria-label="london">
                 🏛️
             </span>
           </div>
@@ -682,7 +683,7 @@ const Lisbon = () => {
                 color: "#2d3748",
               }}
             >
-              lisbon Airbnb Data Story
+              london Airbnb Data Story
             </h1>
             <div
               style={{
@@ -693,7 +694,7 @@ const Lisbon = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across lisbon’s
+              Explore how Airbnb listings are distributed across london’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and
@@ -711,7 +712,7 @@ const Lisbon = () => {
       </section>
       {/* ====== FILTERS ABOVE MAP ====== */}
       <div
-        className="lisbon-filters-row"
+        className="london-filters-row"
         style={{
           marginBottom: "2rem",
           background: "var(--header-bg)",
@@ -941,7 +942,7 @@ const Lisbon = () => {
       </div>
       {/* ====== MAP CARD ====== */}
       <div
-        className="lisbon-map-card"
+        className="london-map-card"
         style={{
           background: "var(--header-bg)",
           borderRadius: "18px",
@@ -966,7 +967,7 @@ const Lisbon = () => {
           <span role="img" aria-label="map">
             🗺️
           </span>{" "}
-          lisbon Airbnb Map
+          london Airbnb Map
         </h2>
         <div
           style={{
@@ -989,7 +990,7 @@ const Lisbon = () => {
           }}
         >
           <MapContainer
-            center={[38.7223, -9.1393]}
+            center={[51.5072, 0.1276]}
             zoom={13}
             style={{ height: "700px", width: "100%" }}
           >
@@ -1129,7 +1130,7 @@ const Lisbon = () => {
       {/* End of map card */}
       {/* ====== KEY INSIGHTS SECTION ====== */}
       <div
-        className="lisbon-key-insights"
+        className="london-key-insights"
         style={{
           background: "var(--header-bg)",
           borderRadius: "14px",
@@ -1259,7 +1260,7 @@ const Lisbon = () => {
       </div>
       {/* ====== VISUALIZATIONS SECTION ====== */}
       <div
-        className="lisbon-visuals-row"
+        className="london-visuals-row"
         style={{
           display: "flex",
           gap: "2rem",
@@ -1327,7 +1328,7 @@ const Lisbon = () => {
             }}
           />
           <div
-            className="lisbon-filters-row"
+            className="london-filters-row"
             style={{
               marginBottom: "1.2rem",
               background: "var(--header-bg)",
@@ -1477,7 +1478,7 @@ const Lisbon = () => {
             dropdowns to customize axes.
           </div>
           <div
-            className="lisbon-filters-row"
+            className="london-filters-row"
             style={{
               marginBottom: "1.2rem",
               background: "var(--header-bg)",
@@ -1798,4 +1799,4 @@ const Lisbon = () => {
   );
 };
 
-export default Lisbon;
+export default London;

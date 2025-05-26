@@ -9,6 +9,7 @@ import Barcelona from './pages/Barcelona'
 import Berlin from './pages/Berlin'
 import Budapest from './pages/Budapest'
 import Lisbon from './pages/Lisbon'
+import London from './pages/London'
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/eurobnb-insights/lisbon",
     element: <Lisbon />,
+  },
+  {
+    path: "/eurobnb-insights/london",
+    element: <London />,
   },
 
 ])
