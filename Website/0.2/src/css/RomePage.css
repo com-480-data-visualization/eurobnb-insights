@@ -1,0 +1,443 @@
+/* ====== THEME VARIABLES ====== */
+.rome-dashboard-page.weekday-theme {
+  --main-bg: #f8fafc;
+  --header-bg: linear-gradient(90deg, #f8fafc 60%, #e0e7ff 100%);
+  --accent: #6366f1;
+  --button-bg: #6366f1;
+  --button-color: #fff;
+  --button-border: #6366f1;
+  --card-bg: #f8fafc;
+  --caption-bg: #f1f5f9;
+  --caption-color: #4a5568;
+}
+
+.rome-dashboard-page.weekend-theme {
+  --main-bg: #fff5f3;
+  --header-bg: linear-gradient(90deg, #fff5f3 60%, #ffe0e0 100%);
+  --accent: #e74c3c;
+  --button-bg: #e74c3c;
+  --button-color: #fff;
+  --button-border: #e74c3c;
+  --card-bg: #fff5f3;
+  --caption-bg: #ffe0e0;
+  --caption-color: #4a5568;
+}
+
+/* ====== PAGE BACKGROUND ====== */
+.rome-dashboard-page {
+  min-height: 100vh;
+  background: var(--main-bg);
+  transition: background 0.3s;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ====== STICKY TOGGLE BAR ====== */
+.rome-dashboard-page > div[style*="sticky"] {
+  background: var(--header-bg);
+  border-bottom: 1.5px solid #e2e8f0;
+  transition: background 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+}
+
+/* ====== BUTTONS ====== */
+.rome-dashboard-page button,
+.rome-dashboard-page .filter-btn,
+.rome-dashboard-page .filter-toggle-btn {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  font-size: 1em;
+}
+
+.rome-dashboard-page button:focus {
+  outline: 2px solid var(--accent);
+}
+
+.rome-dashboard-page .filter-btn {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 0.5em;
+}
+
+.rome-dashboard-page .filter-toggle-btn {
+  background: var(--header-bg);
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+  color: #2d3748;
+}
+
+/* ====== HEADER CARD ====== */
+.dashboard-header-card {
+  background: var(--header-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 1500px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.dashboard-header-card h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #2d3748;
+}
+
+.dashboard-header-card .section-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+/* ====== FILTERS ROW ====== */
+.rome-filters-row {
+  margin-bottom: 2rem;
+  background: var(--header-bg);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  position: relative;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s;
+}
+
+.rome-filters-row .filter-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 1em;
+  color: #2d3748;
+  gap: 0.3em;
+}
+
+.rome-filters-row .filter-select,
+.rome-filters-row .filter-input {
+  margin-top: 0.3em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  min-width: 120px;
+}
+
+.rome-filters-row .filter-input[type="number"] {
+  width: 90px;
+}
+
+/* ====== MAP CARD ====== */
+.rome-map-card {
+  background: var(--header-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 1500px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.rome-map-card h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.rome-map-card .map-caption {
+  background: var(--caption-bg);
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  font-size: 1.05em;
+  color: var(--caption-color);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ====== VISUAL CARDS ====== */
+.rome-visuals-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.visual-card {
+  background: var(--header-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60,60,120,0.07);
+  padding: 2rem 2rem 1.5rem 2rem;
+  flex: 1 1 420px;
+  min-width: 350px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.visual-card .viz-caption {
+  background: var(--caption-bg);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-size: 1.01em;
+  color: var(--caption-color);
+  border: 1px solid #e0e0e0;
+  margin-top: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* ====== STAR BAR FOR RATINGS ====== */
+.star-bar {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #ffd700;
+  vertical-align: middle;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+/* ====== GENERAL ====== */
+hr {
+  border: none;
+  border-top: 1.5px solid #e2e8f0;
+  margin: 2rem 0 0 0;
+}
+
+/* ====== LEAFLET MAP OVERRIDES ====== */
+.leaflet-container {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  width: 100% !important;
+  min-height: 350px;
+  height: 700px;
+  max-width: 100vw;
+}
+
+/* ====== TOOLTIP FOR CHARTS ====== */
+.recharts-tooltip-wrapper {
+  z-index: 9999;
+}
+
+.recharts-default-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+/* ====== SCROLLBAR ====== */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Modern switch for compare toggle in bar chart */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(60,60,120,0.10);
+}
+input:checked + .slider {
+  background-color: #6366f1;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.slider.round {
+  border-radius: 24px;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1200px) {
+  .dashboard-header-card,
+  .rome-map-card,
+  .rome-filters-row,
+  .visual-card {
+    max-width: 98vw;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-header-card,
+  .rome-map-card,
+  .rome-filters-row,
+  .visual-card {
+    max-width: 100vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  .rome-visuals-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .visual-card {
+    min-width: 0;
+    width: 100%;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .rome-map-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .dashboard-header-card h1 {
+    font-size: 2rem;
+  }
+  .rome-map-card h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-header-card,
+  .rome-map-card,
+  .rome-filters-row,
+  .visual-card {
+    border-radius: 10px;
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    margin: 1rem 0.1rem;
+    font-size: 0.97em;
+  }
+  .rome-visuals-row {
+    gap: 1rem;
+  }
+  .filter-form {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100%;
+  }
+  .rome-filters-row .filter-label {
+    width: 100%;
+  }
+  .rome-filters-row .filter-select,
+  .rome-filters-row .filter-input {
+    width: 100%;
+    min-width: 0;
+  }
+  .map-caption, .viz-caption {
+    font-size: 0.97em;
+    padding: 0.5em 0.5em;
+    max-width: 98vw;
+  }
+  h1, h2, h3 {
+    font-size: 1.1em !important;
+  }
+  .leaflet-container {
+    height: 350px !important;
+    min-height: 220px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-header-card,
+  .rome-map-card,
+  .rome-filters-row,
+  .visual-card {
+    padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    margin: 0.5rem 0;
+    font-size: 0.95em;
+  }
+  .dashboard-header-card h1 {
+    font-size: 1.1rem;
+  }
+  .rome-map-card h2 {
+    font-size: 1rem;
+  }
+  .visual-card .section-title {
+    font-size: 1rem;
+  }
+  .leaflet-container {
+    height: 220px !important;
+    min-height: 120px !important;
+  }
+  .map-caption, .viz-caption {
+    font-size: 0.93em;
+    padding: 0.4em 0.2em;
+  }
+}
+
+/* Utility: Hide scrollbars on mobile for a cleaner look */
+@media (max-width: 700px) {
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}

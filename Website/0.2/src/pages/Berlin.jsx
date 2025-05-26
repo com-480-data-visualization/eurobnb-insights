@@ -38,7 +38,6 @@ const Berlin = () => {
     .then((data) => setDistricts(data))
 }, []);
 
-console.log("Districts loaded:", districts);
 
   useEffect(() => {
     Papa.parse(

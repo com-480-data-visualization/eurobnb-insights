@@ -38,7 +38,6 @@ const London = () => {
     .then((data) => setDistricts(data))
 }, []);
 
-console.log("Districts loaded:", districts);
 
   useEffect(() => {
     Papa.parse(
@@ -990,7 +989,7 @@ console.log("Districts loaded:", districts);
           }}
         >
           <MapContainer
-            center={[51.5072, 0.1276]}
+            center={[51.5072, -0.1276]}
             zoom={13}
             style={{ height: "700px", width: "100%" }}
           >

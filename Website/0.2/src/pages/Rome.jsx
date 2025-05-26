@@ -20,10 +20,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import "../css/AthensPage.css";
+import "../css/RomePage.css";
 import { data } from "react-router-dom";
 
-const Athens = () => {
+const Rome = () => {
   const [dayType, setDayType] = useState("weekday");
   const [districts, setDistricts] = useState(null);
   const [listings, setListings] = useState([]);
@@ -33,7 +33,7 @@ const Athens = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  fetch("./athens.geojson")
+  fetch("./rome.geojson")
     .then((res) => res.json())
     .then((data) => setDistricts(data))
 }, []);
@@ -41,7 +41,7 @@ const Athens = () => {
 
   useEffect(() => {
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/athens_weekdays.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/rome_weekdays.csv",
       {
         download: true,
         header: true,
@@ -49,7 +49,7 @@ const Athens = () => {
       }
     );
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/athens_weekends.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/rome_weekends.csv",
       {
         download: true,
         header: true,
@@ -61,8 +61,8 @@ const Athens = () => {
   useEffect(() => {
     const url =
       dayType === "weekday"
-        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/athens_weekdays.csv"
-        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/athens_weekends.csv";
+        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/rome_weekdays.csv"
+        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/rome_weekends.csv";
     Papa.parse(url, {
       download: true,
       header: true,
@@ -584,7 +584,7 @@ const Athens = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className={`athens-dashboard-page ${dayType}-theme`}>
+    <div className={`rome-dashboard-page ${dayType}-theme`}>
       <div
         style={{
           position: "sticky",
@@ -668,7 +668,7 @@ const Athens = () => {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <div style={{ fontSize: "3.5rem", lineHeight: 1 }}>
-            <span role="img" aria-label="athens">
+            <span role="img" aria-label="rome">
                 🏛️
             </span>
           </div>
@@ -682,7 +682,7 @@ const Athens = () => {
                 color: "#2d3748",
               }}
             >
-              Athens Airbnb Data Story
+              rome Airbnb Data Story
             </h1>
             <div
               style={{
@@ -693,7 +693,7 @@ const Athens = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across Athens’s
+              Explore how Airbnb listings are distributed across rome’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and
@@ -711,7 +711,7 @@ const Athens = () => {
       </section>
       {/* ====== FILTERS ABOVE MAP ====== */}
       <div
-        className="athens-filters-row"
+        className="rome-filters-row"
         style={{
           marginBottom: "2rem",
           background: "var(--header-bg)",
@@ -941,7 +941,7 @@ const Athens = () => {
       </div>
       {/* ====== MAP CARD ====== */}
       <div
-        className="athens-map-card"
+        className="rome-map-card"
         style={{
           background: "var(--header-bg)",
           borderRadius: "18px",
@@ -966,7 +966,7 @@ const Athens = () => {
           <span role="img" aria-label="map">
             🗺️
           </span>{" "}
-          Athens Airbnb Map
+          rome Airbnb Map
         </h2>
         <div
           style={{
@@ -989,7 +989,7 @@ const Athens = () => {
           }}
         >
           <MapContainer
-            center={[37.9838, 23.7275]}
+            center={[41.8967, 12.4822]}
             zoom={13}
             style={{ height: "700px", width: "100%" }}
           >
@@ -1129,7 +1129,7 @@ const Athens = () => {
       {/* End of map card */}
       {/* ====== KEY INSIGHTS SECTION ====== */}
       <div
-        className="athens-key-insights"
+        className="rome-key-insights"
         style={{
           background: "var(--header-bg)",
           borderRadius: "14px",
@@ -1259,7 +1259,7 @@ const Athens = () => {
       </div>
       {/* ====== VISUALIZATIONS SECTION ====== */}
       <div
-        className="athens-visuals-row"
+        className="rome-visuals-row"
         style={{
           display: "flex",
           gap: "2rem",
@@ -1327,7 +1327,7 @@ const Athens = () => {
             }}
           />
           <div
-            className="athens-filters-row"
+            className="rome-filters-row"
             style={{
               marginBottom: "1.2rem",
               background: "var(--header-bg)",
@@ -1477,7 +1477,7 @@ const Athens = () => {
             dropdowns to customize axes.
           </div>
           <div
-            className="athens-filters-row"
+            className="rome-filters-row"
             style={{
               marginBottom: "1.2rem",
               background: "var(--header-bg)",
@@ -1798,4 +1798,4 @@ const Athens = () => {
   );
 };
 
-export default Athens;
+export default Rome;

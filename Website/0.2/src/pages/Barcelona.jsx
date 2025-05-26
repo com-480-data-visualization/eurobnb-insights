@@ -39,10 +39,6 @@ const Barcelona = () => {
 }, []);
 
 
-
-
-console.log("Districts loaded:", districts);
-
   useEffect(() => {
     Papa.parse(
       "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/master/Dataset/Processed-Dataset/barcelona_weekdays.csv",
