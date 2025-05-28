@@ -41,7 +41,7 @@ const London = () => {
 
   useEffect(() => {
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekdays.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Processed-Dataset/london_weekdays.csv",
       {
         download: true,
         header: true,
@@ -49,7 +49,7 @@ const London = () => {
       }
     );
     Papa.parse(
-      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekends.csv",
+      "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Processed-Dataset/london_weekends.csv",
       {
         download: true,
         header: true,
@@ -61,8 +61,8 @@ const London = () => {
   useEffect(() => {
     const url =
       dayType === "weekday"
-        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekdays.csv"
-        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekends.csv";
+        ? "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Processed-Dataset/london_weekdays.csv"
+        : "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Processed-Dataset/london_weekends.csv";
     Papa.parse(url, {
       download: true,
       header: true,

@@ -10,7 +10,10 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Eurobnb Insights</h1>
+        <div className="header-content">
+          <img src={logo} alt="Eurobnb Logo" className="./logo_full.jpeg" />
+          <h1>Eurobnb Insights</h1>
+        </div>
       </header>
 
       <div className="app-content">

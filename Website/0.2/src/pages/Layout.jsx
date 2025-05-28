@@ -34,7 +34,7 @@ const cityList = [
   },
   {
     name: "London",
-    url: "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Reduced-Dataset/london_weekdays.csv",
+    url: "https://raw.githubusercontent.com/com-480-data-visualization/eurobnb-insights/refs/heads/master/Dataset/Processed-Dataset/london_weekdays.csv",
   },
   {
     name: "Paris",

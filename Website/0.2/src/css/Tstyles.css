@@ -173,6 +173,23 @@ body, html {
   margin-top: 2rem;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-logo {
+  height: 48px; /* Adjust as needed */
+  width: auto;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+  max-height: 48px; /* Ensure logo doesn't exceed header height */
+}
+
 /* Override Nivo's injected zero-size div styles inside .viz-chart */
 
 
