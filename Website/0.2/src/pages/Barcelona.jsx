@@ -668,7 +668,7 @@ const Barcelona = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <div style={{ fontSize: "3.5rem", lineHeight: 1 }}>
             <span role="img" aria-label="barcelona">
-                🏖️
+              🏖️
             </span>
           </div>
           <div>
@@ -681,7 +681,7 @@ const Barcelona = () => {
                 color: "#2d3748",
               }}
             >
-              barcelona Airbnb Data Story
+              Barcelona Airbnb Data Story
             </h1>
             <div
               style={{
@@ -692,7 +692,7 @@ const Barcelona = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across barcelona’s
+              Explore how Airbnb listings are distributed across Barcelona’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and

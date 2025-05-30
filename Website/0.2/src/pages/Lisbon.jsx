@@ -669,7 +669,7 @@ const Lisbon = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <div style={{ fontSize: "3.5rem", lineHeight: 1 }}>
             <span role="img" aria-label="lisbon">
-                🏛️
+              🏖️
             </span>
           </div>
           <div>
@@ -682,7 +682,7 @@ const Lisbon = () => {
                 color: "#2d3748",
               }}
             >
-              lisbon Airbnb Data Story
+              Lisbon Airbnb Data Story
             </h1>
             <div
               style={{
@@ -693,7 +693,7 @@ const Lisbon = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across lisbon’s
+              Explore how Airbnb listings are distributed across Lisbon’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and

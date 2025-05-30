@@ -682,7 +682,7 @@ const Berlin = () => {
                 color: "#2d3748",
               }}
             >
-              berlin Airbnb Data Story
+              Berlin Airbnb Data Story
             </h1>
             <div
               style={{
@@ -693,7 +693,7 @@ const Berlin = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across berlin’s
+              Explore how Airbnb listings are distributed across Berlin’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and

@@ -669,7 +669,7 @@ const Vienna = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <div style={{ fontSize: "3.5rem", lineHeight: 1 }}>
             <span role="img" aria-label="vienna">
-                🏛️
+              🏰
             </span>
           </div>
           <div>
@@ -682,7 +682,7 @@ const Vienna = () => {
                 color: "#2d3748",
               }}
             >
-              vienna Airbnb Data Story
+              Vienna Airbnb Data Story
             </h1>
             <div
               style={{
@@ -693,7 +693,7 @@ const Vienna = () => {
                 maxWidth: 700,
               }}
             >
-              Explore how Airbnb listings are distributed across vienna’s
+              Explore how Airbnb listings are distributed across Vienna’s
               districts.
               <br />
               Discover which zones lead in listings, compare price/rating, and

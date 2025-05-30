@@ -31,7 +31,7 @@ Our goal is to help travelers, hosts, and city planners understand how short-ter
 
 ## Links
 
-- [🌐 Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
+- [🌐 Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights)
 - [📄 Process Book]()
 - [📹 Screen Cast](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Screencast-Eurobnb.mp4)
 - [💻 GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
