@@ -29,12 +29,13 @@ Our goal is to help travelers, hosts, and city planners understand how short-ter
 4. **View in browser:**  
    Go to `http://localhost:3000` (or as instructed in your terminal).
 
-## Links, Code and Process Book
+## Links
 
-- [Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
-- [Process Book]()
-- [Scree Cast]()
-- [GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
+- [🌐 Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
+- [📄 Process Book]()
+- [📹 Screen Cast](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Screencast-Eurobnb.mp4)
+- [💻 GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
+- [📀 Dataset](https://github.com/com-480-data-visualization/eurobnb-insights/tree/master/Dataset)
 
 
 ## Milestones
