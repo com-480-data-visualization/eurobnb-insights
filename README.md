@@ -32,7 +32,7 @@ Our goal is to help travelers, hosts, and city planners understand how short-ter
 ## Links
 
 - [🌐 Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights)
-- [📄 Process Book]()
+- [📄 Process Book](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Process-Book.pdf)
 - [📹 Screen Cast](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Screencast-Eurobnb.mp4)
 - [💻 GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
 - [📀 Dataset](https://github.com/com-480-data-visualization/eurobnb-insights/tree/master/Dataset)
@@ -54,7 +54,7 @@ Our goal is to help travelers, hosts, and city planners understand how short-ter
 
 ### Milestone 3 (30th May, 5pm)
 - **📄 Process Book**
-   - The process book for Milestone 3 is available in the "Milestone-3" folder as "Process_Book.pdf" or directly via [this link]()
+   - The process book for Milestone 3 is available in the "Milestone-3" folder as "Process_Book.pdf" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Process-Book.pdf)
 - **🌐 Final Website**
    - The final website is available online [here](https://com-480-data-visualization.github.io/eurobnb-insights/).
 - **📹 Screencast**
