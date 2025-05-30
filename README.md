@@ -9,6 +9,7 @@
 | Imane Jennane           | 310900 |
 
 </div>
+
 ## Overview
 
 **EuroBnB Insights** is a web dashboard for interactive data visualization and analysis of Airbnb listings across ten major European cities: Amsterdam, Athens, Barcelona, Berlin, Budapest, Lisbon, London, Paris, Rome, and Vienna.  
