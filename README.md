@@ -9,12 +9,56 @@
 | Imane Jennane           | 310900 |
 
 </div>
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
-
 ## Overview
 
 **EuroBnB Insights** is a web dashboard for interactive data visualization and analysis of Airbnb listings across ten major European cities: Amsterdam, Athens, Barcelona, Berlin, Budapest, Lisbon, London, Paris, Rome, and Vienna.  
 Our goal is to help travelers, hosts, and city planners understand how short-term rentals differ and converge across Europe, using data-driven visualizations and comparative metrics.
+
+## How to Run Locally
+
+1. **Clone the repo:**  
+   `git clone https://github.com/com-480-data-visualization/eurobnb-insights.git`
+
+2. **Install dependencies:**  
+   `npm install`
+
+3. **Start the app:**  
+   `npm run dev`
+
+4. **View in browser:**  
+   Go to `http://localhost:3000` (or as instructed in your terminal).
+
+## Links, Code and Process Book
+
+- [Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
+- [Process Book]()
+- [Scree Cast]()
+- [GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
+
+
+## Milestones
+### Milestone 1 (21st March, 5pm)
+- **📀 Dataset:**
+  - The dataset used for this project is available in the "Dataset" folder as "eurobnb_dataset.csv" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/tree/master/Dataset)
+-  📄 **Milestone 1 Report**
+   - The report for Milestone 1 is available in the "Milestone-1" folder as "Milestone_1_Dataviz.pdf" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-1/Milestone_1_DataViz.pdf).
+### Milestone 2 (18th April, 5pm)
+
+- 📄 **Milestone 2 Report:**  
+  - Available in the "Milestone-2" folder as "Milestone_2_Dataviz.pdf" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-2/Milestone_2_Dataviz.pdf).
+- 🌐 **Prototype Website:**  
+  - Access the prototype online [here](https://com-480-data-visualization.github.io/eurobnb-insights/).
+
+
+### Milestone 3 (30th May, 5pm)
+- **📄 Process Book**
+   - The process book for Milestone 3 is available in the "Milestone-3" folder as "Process_Book.pdf" or directly via [this link]()
+- **🌐 Final Website**
+   - The final website is available online [here](https://com-480-data-visualization.github.io/eurobnb-insights/).
+- **📹 Screencast**
+   - The screencast demonstrating the final dashboard can be found [here](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-3/Screencast-Eurobnb.mp4). You will need to download the file to view it.
+
+
 
 ## Features
 
@@ -69,46 +113,6 @@ All data is standardized across cities for fair comparisons and smooth visual in
 
 
 
-## How to Run Locally
-
-1. **Clone the repo:**  
-   `git clone https://github.com/com-480-data-visualization/eurobnb-insights.git`
-
-2. **Install dependencies:**  
-   `npm install`
-
-3. **Start the app:**  
-   `npm run dev`
-
-4. **View in browser:**  
-   Go to `http://localhost:3000` (or as instructed in your terminal).
-
-## Links, Code and Process Book
-
-- [Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
-- [Process Book]()
-- [Scree Cast]()
-- [GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
-
-
-
-## Milestone 1 (21st March, 5pm)
-
-Milestone 1 Report can be found in the Milestone-1 folder called as "Milestone_1_Dataviz.pdf", or in this [link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-1/Milestone_1_DataViz.pdf).
-
-## Milestone 2 (18th April, 5pm)
-
-- 📄 **Milestone 2 Report:**  
-  Available in the "Milestone-2" folder as "Milestone_2_Dataviz.pdf" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-2/Milestone_2_Dataviz.pdf).
-
-- 🌐 **Prototype Website:**  
-  Access the prototype online [here](https://com-480-data-visualization.github.io/eurobnb-insights/).
-
-
-## Milestone 3 (30th May, 5pm)
-- **Process Book**
-   - The process book for Milestone 3 is available in the "Milestone-3" folder as "Process_Book.pdf" or directly via [this link]()
-
 
 ## License
 
@@ -125,7 +129,7 @@ For questions, suggestions, or feedback, please use the [GitHub Issues](https://
 ## Acknowledgments
 
 - Professor Laurent Vuillon (EPFL)
-- Kaggle for the original datasets
+- Kaggle Dataset: [Airbnb in Europe](https://www.kaggle.com/datasets/thedevastator/airbnb-prices-in-european-cities)
 - Open-source communities for tools and libraries
 
 ---
