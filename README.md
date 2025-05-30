@@ -1,5 +1,16 @@
 # EuroBnB Insights: Airbnb in Europe – Data Visualization Dashboard 🇪🇺🏨
 
+<div align="center">
+
+| Student's name          | SCIPER |
+| ----------------------- | ------ |
+| Harkeerat Singh Sawhney | 394887 |
+| Daniela Gjorgjieva      | 376745 |
+| Imane Jennane           | 310900 |
+
+</div>
+[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+
 ## Overview
 
 **EuroBnB Insights** is a web dashboard for interactive data visualization and analysis of Airbnb listings across ten major European cities: Amsterdam, Athens, Barcelona, Berlin, Budapest, Lisbon, London, Paris, Rome, and Vienna.  
@@ -72,9 +83,32 @@ All data is standardized across cities for fair comparisons and smooth visual in
 4. **View in browser:**  
    Go to `http://localhost:3000` (or as instructed in your terminal).
 
-## Live Demo & Code
+## Links, Code and Process Book
 
+- [Website-Link](https://com-480-data-visualization.github.io/eurobnb-insights/amsterdam)
+- [Process Book]()
+- [Scree Cast]()
 - [GitHub Repository](https://github.com/com-480-data-visualization/eurobnb-insights)
+
+
+
+## Milestone 1 (21st March, 5pm)
+
+Milestone 1 Report can be found in the Milestone-1 folder called as "Milestone_1_Dataviz.pdf", or in this [link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-1/Milestone_1_DataViz.pdf).
+
+## Milestone 2 (18th April, 5pm)
+
+- 📄 **Milestone 2 Report:**  
+  Available in the "Milestone-2" folder as "Milestone_2_Dataviz.pdf" or directly via [this link](https://github.com/com-480-data-visualization/eurobnb-insights/blob/master/Milestone/Milestone-2/Milestone_2_Dataviz.pdf).
+
+- 🌐 **Prototype Website:**  
+  Access the prototype online [here](https://com-480-data-visualization.github.io/eurobnb-insights/).
+
+
+## Milestone 3 (30th May, 5pm)
+- **Process Book**
+   - The process book for Milestone 3 is available in the "Milestone-3" folder as "Process_Book.pdf" or directly via [this link]()
+
 
 ## License
 
